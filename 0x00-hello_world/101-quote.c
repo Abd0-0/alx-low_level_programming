@@ -1,22 +1,22 @@
 #include <stdio.h>
 #include <string.h>
 
-/*
- *
- *Description: This is a c program that print a phrase using putchar() function  
- * 
+/**
+ * main - Entry point
+ *Description: This is a c program that print a phrase using putchar() function
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	char s[] = {'a','n','d',' ', 't','h', 'a', 't', ' ', 'p','i','e','c','e', 'o','f', ' ' ,'a','r','t', 'i', 's', ' ', 'u','s','e','f', 'u','l', '\"',' ', '-', ' ','D','o','r','a',' ','K','o','r','p','a','r',',',' ', '2','0','1','5','-','1','0','-','1','9'};
+	char s[] = {"and that piece of art is useful\" - Dora Korpar, 2015-10-19"};
 	int n = strlen(s);
 	int i = 0;
 	while(i != n)
-	{
-		putchar(i);
-		i++;
-	}	
+		{
+			putchar(s[i]);
+		        i++;
+		}
 	putchar('\n');
-	return (1);
+	return(1);
 }
