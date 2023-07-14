@@ -8,7 +8,7 @@
  *Description: A program that tells you if the random number is:
  * positive, or negative, or == 0.
  *
- * main Return : 0 (success)
+ *Return: Always 0 (Success)
  */
 int main(void)		/* Returns 0 */
 {
