@@ -3,21 +3,24 @@
 
 /**
  *
- * main - Entry point
+ *main - Entry point
  *Description: This is a c program that print a phrase using putchar() function
- * Return: Always 0 (Success)
+ *Return: Always 1 (Success)
  */
 
+/*main - Entry point*/
 int main(void)
 {
 	char s[] = {"and that piece of art is useful\" - Dora Korpar, 2015-10-19"};
 	int n = strlen(s);
 	int i = 0;
 	while (i != n)
+
 		{
 			putchar(s[i]);
 			i++;
 		}
+
 	putchar('\n');
 	return (1);
 }
