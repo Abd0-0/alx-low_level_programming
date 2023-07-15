@@ -15,7 +15,7 @@ int main(void)
 
 	{
 		putchar('0' + i);
-		i++
+		i++;
 	}
 
 	printf("\n");
