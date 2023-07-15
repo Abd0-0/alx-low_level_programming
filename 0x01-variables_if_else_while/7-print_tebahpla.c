@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+
+int main(void)
+{
+	char rev = 'z';
+
+	while (rev >= 'a')
+
+	{
+		putchar(rev);
+		putchar--;
+	}
+
+	putchar('\n');
+	return (0);
+}
