@@ -18,12 +18,12 @@ int main(void)
 		alpha++;
 	}
 
-	char beta = 'A';
+	alpha  = 'A';
 
-	while (beta <= 'Z')
+	while (alpha <= 'Z')
 	{
-		putchar(beta);
-		beta++;
+		putchar(alpha);
+		alpha++;
 	}
 	putchar('\n');
 	return (0);
