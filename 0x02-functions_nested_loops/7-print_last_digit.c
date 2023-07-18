@@ -8,13 +8,13 @@
  * Return: l the last digit, which store in l.
 */
 
-int print_last_digit(int n[])
+int print_last_digit(int n)
 {
-	int i, l = 0;
+	int i, l = 0, c[] = n;
 
-	for (i = 0; n[i] != '\0'; i++)
+	for (i = 0; c[i] != '\0'; i++)
 	{
-		l = n[i];
+		l = c[i];
 	}
 
 	return (l);
