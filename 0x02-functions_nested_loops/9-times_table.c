@@ -17,21 +17,21 @@ void times_table(void)
 		{
 			if (j == 9)
 			{
-				m = i * j;
-				_putchar(m + '0');
-				putchar('$');
+				m = j * i;
+				_putchar(m);
 			}
 
 			else
 			{
-				m = i * j;
-				_putchar(m + '0');
+				m = j * i;
+				_putchar(m);
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
 			}
 
-			putchar('\n');
 		}
+
+		putchar('\n');
 	}
 }
