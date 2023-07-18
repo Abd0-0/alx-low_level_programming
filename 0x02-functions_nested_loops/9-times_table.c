@@ -20,13 +20,13 @@ void times_table(void)
 			if (j == 9)
 			{
 				m = j * i;
-				putchar(m);
+				putchar(m * 1);
 			}
 
 			else
 			{
 				m = j * i;
-				putchar(m);
+				putchar(m * 1);
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
