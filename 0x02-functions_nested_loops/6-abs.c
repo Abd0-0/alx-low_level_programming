@@ -3,9 +3,9 @@
 /**
  * _abs - a function that computes the absolute value of an integer.
  *
- * @int: takes an int.
+ * @n: takes an int n.
  *
- * Return: an int.
+ * Return: the abs value.
 */
 
 int _abs(int n)
