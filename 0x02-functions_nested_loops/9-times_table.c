@@ -4,7 +4,7 @@
 /**
  * times_table - prints the 9 times table, starting with 0.
  *
- * Return: a value tupe of void.
+ * Return: void, (stores nothing)
 */
 
 void times_table(void)
@@ -17,25 +17,18 @@ void times_table(void)
 		{
 			m = j * i;
 
-			if (m <= 9)
-			{
-				m = j * i;
+			_putchar((m / 10) + '0');
 
-				putchar(m % 10);
+			if (m > 9)
+			{
+				_putchar((m % 10) + '0');
 			}
 
-			else
+			while (j < 9)
 			{
-				m = j * i;
-				if ( m <= 9)
-					if ( m <= 9)
-
-				putchar(m * 1);
 				_putchar(',');
 				_putchar(' ');
-				_putchar(' ');
 			}
-
 		}
 		_putchar('\n');
 	}
