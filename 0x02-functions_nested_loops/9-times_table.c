@@ -26,14 +26,14 @@ void times_table(void)
 			else
 				_putchar(m + 48);
 
-			if (j < 9 && m < 9)
+			if (j < 9 && m <= 9)
 			{
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
 			}
 
-			if (j < 9 && m >= 9)
+			if (j < 9 && m > 9)
 			{
 				_putchar(',');
 				_putchar(' ');
