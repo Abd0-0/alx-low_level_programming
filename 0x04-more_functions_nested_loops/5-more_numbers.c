@@ -16,9 +16,10 @@ void more_numbers(void)
 			if (j > 9)
 			{
 				_putchar('1');
+				j = j % 10;
 			}
 
-			_putchar(i + '0');
+			_putchar(j + '0');
 		}
 
 		_putchar('\n');
