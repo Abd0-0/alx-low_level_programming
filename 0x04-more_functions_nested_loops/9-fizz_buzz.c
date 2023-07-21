@@ -25,7 +25,11 @@ int main(void)
 
 		else if ((i % 3) == 0)
 		{
-			printf("Fizz ");
+			if (i == 100)
+				printf("Fizz");
+
+			else
+				printf("Fizz ");
 		}
 
 		else
