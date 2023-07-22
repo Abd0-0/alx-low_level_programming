@@ -48,9 +48,9 @@ long int primeFactors(long int n)
 	/* so we need to divise by odd num 3, 5, 7..etc */
 
 
-	for (i = 30; i * i <= n; i = i + 2)
+	for (i = 3; i * i <= n; i = i + 2)
 	{
-		while (n % i)
+		while (n % i == 0)
 		{
 			largest = i;
 			n = n / i;
