@@ -12,15 +12,13 @@
 void print_rev(char *s)
 {
 	int i, n;
-	n = strlen(s);
-	char rev[n + 1];
+	n = int _strlen(s);
+	char *rev;
 
 	for (i = 0;  i < n + 1; i++)
 	{
-		rev[0] = s[n - i];
+		rev[i] = s[n - i];
 	}
-	
-	rev[n + 1] = '\0';
 
 	printf("%s\n", rev);
 }
