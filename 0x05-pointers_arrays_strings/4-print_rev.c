@@ -13,12 +13,12 @@ void print_rev(char *s)
 {
 	int i, n;
 
-	n = strlen(s);
+	n = strlen(s) + 1;
 
-	for (i = n;  i > 0; i--)
+	for (i = n;  i >= 0; i--)
 	{
 		_putchar(s[i]);
 	}
 
-	printf("\n");
+	_putchar('\n');
 }
