@@ -11,10 +11,9 @@
 
 void print_rev(char *s)
 {
-	char rev[];
 	int i, n;
 	n = strlen(s);
-	rev[n + 1];
+	char *rev[n + 1];
 
 	for (i = 0;  i < n + 1; i++)
 	{
