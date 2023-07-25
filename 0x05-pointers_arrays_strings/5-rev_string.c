@@ -15,17 +15,13 @@ void print_rev(char *s)
 
 	n = strlen(s);
 
-	char arr[n];
+	char tmp;
 
-	for (i = n - 1;  i >= 0; i--)
+	for (i = 0;  i < n / 2; i++)
 	{
-		arr[(n - 1) - i] = s[i];
+		tmp = s[i];
+		s[i] = s[n - i - 1];
+		s[n - i - 1] = s[i];
 	}
 
-	for (i = 0; i <= n - 1; i++)
-	{
-		s[i] = arr[i];
-	}
-
-	_putchar('\n');
 }
