@@ -19,7 +19,7 @@ void print_rev(char *s)
 
 	for (i = n - 1;  i >= 0; i--)
 	{
-		arr[(n - 1) - i] = s[i]);
+		arr[(n - 1) - i] = s[i];
 	}
 
 	for (i = 0; i <= n - 1; i++)
