@@ -13,9 +13,9 @@ void print_rev(char *s)
 {
 	int i, n;
 
-	n = strlen(s);
+	n = strlen(s) + 1;
 
-	for (i = 0; i < n; i++)
+	for (i = 0; i <= n; i++)
 	{
 		_putchar(s[n - i]);
 	}
