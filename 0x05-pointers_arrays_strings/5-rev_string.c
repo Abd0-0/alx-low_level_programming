@@ -12,10 +12,10 @@
 void print_rev(char *s)
 {
 	int i, n;
+	char tmp;
 
 	n = strlen(s);
 
-	char tmp;
 
 	for (i = 0;  i < n / 2; i++)
 	{
