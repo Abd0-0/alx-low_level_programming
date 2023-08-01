@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * strspn - function that gets the length of a prefix substring.
+ * _strspn - function that gets the length of a prefix substring.
  *
  * @s:the main string to be scanned.
  * @accept: the string containing the list of characters to match in s.
