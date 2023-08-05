@@ -25,6 +25,7 @@ int main(int argc, char **argv)
 		sum = f * s;
 
 		printf("%d\n", sum);
-		return (0);
 	}
+
+	return (0);
 }
