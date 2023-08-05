@@ -12,11 +12,7 @@
 
 int main(int argc, char **argv)
 {
-	int f = atoi(argv[1]), s = atoi(argv[2]), sum;
-
-	sum = f * s;
-
-	if (argc != 3)
+	if (argc != 3 && argc == 1)
 	{
 		printf("Error\n");
 		return (1);
@@ -24,6 +20,10 @@ int main(int argc, char **argv)
 
 	else
 	{
+		int f = atoi(argv[1]), s = atoi(argv[2]), sum;
+
+		sum = f * s;
+
 		printf("%d\n", sum);
 		return (0);
 	}
