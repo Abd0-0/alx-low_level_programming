@@ -13,19 +13,18 @@
 
 int main(int argc, char *argv[])
 {
-	int sum = 0;
+	int i, sum = 0;
 
-	while (--argc)
+	for (i = 1; i < argc; i++)
 	{
-		if (isdigit(argv[argc]) != 0)
-		{
-			sum +=  atoi(argv[argc]);
-		}
-		else
+		if (argv[i] < 48 && argv[i] > 57)
 		{
 			printf("Error\n");
 			return (1);
 		}
+
+		else
+			sum += atoi(argv[i]);
 	}
 
 	printf("%d\n", sum);
