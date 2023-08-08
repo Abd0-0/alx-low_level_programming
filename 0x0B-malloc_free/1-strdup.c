@@ -9,7 +9,7 @@
  *  @str: the string given as a parameter.
  *
  *  Return: a pointer to a newly allocated space in memory,
- *  NULL if str = NULL.
+ *  NULL in case of failure.
  */
 
 char *_strdup(char *str)
@@ -17,13 +17,16 @@ char *_strdup(char *str)
 	char *ptr;
 	int i, s;
 
+	if (str == NULL)
+		return (NULL);
+
 	i = 0;
 
 	while (str[i] != '\0')
 		i++;
 	s = i;
 
-	ptr = malloc(s);
+	ptr = malloc(s * sizeof(char));
 
 	if (ptr == NULL)
 		return (NULL);
