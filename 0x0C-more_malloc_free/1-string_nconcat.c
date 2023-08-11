@@ -1,8 +1,7 @@
 #include <stdlib.h>
 #include "main.h"
-
 /**
- * str_nconcat - function returns a ptr to a newly allocated space in memory,
+ * string_nconcat - function creates a newly allocated space in memory,
  *
  * @s1: the 1st string given as a parameter.
  * @s2: the 2nd string given as a parameter.
@@ -11,7 +10,6 @@
  *  Return: a pointer to a newly allocated space in memory,
  *  NULL in case of failure.
  */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
@@ -23,23 +21,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	i = 0;
-
-	while (s1[i] != '\0')
-		i++;
+	for (i = 0; s1[i] != '\0'; i++)
+		;
 	n1 = i;
 
-	i = 0;
-
-	while (s2[i] != '\0')
-		i++;
-
-	n2 = i + 1;
+	for (i = 0; s2[i] != '\0'; i++)
+		;
+	n2 = i;
 
 	if (n >= n2)
 		n = n2;
 
-	ptr = malloc((n1 + n) * sizeof(char));
+	ptr = malloc((n1 + n + 1) * sizeof(char));
 
 	if (ptr == NULL)
 		return (NULL);
@@ -55,6 +48,5 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2++;
 		i++;
 	}
-
 	return (ptr);
 }
