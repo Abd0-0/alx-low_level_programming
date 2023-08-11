@@ -12,10 +12,10 @@
  *  NULL in case of failure.
  */
 
-char *string_nconcat(char *s1, char *s2, unsigned int n);
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	int i, n1, n2;
+	unsigned int i, n1, n2;
 
 	if (s1 == NULL)
 		s1 = "";
