@@ -10,12 +10,14 @@
  * Description: Longer description for my dog data type
  */
 
-typedef struct dog
+struct dog
 {
 	char *name;
 	char *owner;
 	float age;
-}dog_t;
+}
+
+typedef struct dog dog_t;
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
