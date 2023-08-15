@@ -1,7 +1,7 @@
-#ifndef FUNCTION_LIKE_MACRO.H
-#define FUNCTION_LIKE_MACRO.H
+#ifndef FUNCTION_LIKE_MACRO_H
+#define FUNCTION_LIKE_MACRO_H
 
-#define ABS(x) do {(x) < 0 ? (-(x)) : (x)} while (0)
+#define ABS(x) ((x) < 0 ? (-(x)) : (x))
 
 
 #endif /* #ifndef FUNCTION_LIKE_MACRO.H */
