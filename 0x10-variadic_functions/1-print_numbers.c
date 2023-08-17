@@ -18,7 +18,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_start(vaptr, n);
 
-	if (n > 0)
+	if (n > 1)
 	{
 		for (i = 0; i < n - 1; i++)
 		{
@@ -32,6 +32,12 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		x = va_arg(vaptr, int);
 
 		printf("%i\n", x);
+	}
+
+	else
+	{
+		x = va_arg(vaptr, int);
+		printf("%i", x);
 	}
 
 	va_end(vaptr);
