@@ -12,12 +12,12 @@
 
 int sum_them_all(const unsigned int n, ...)
 {
-	int i, sum = 0;
+	unsigned int i;
+	int sum = 0;
+	va_list vaptr;
 
 	if (n == 0)
 		return (0);
-
-	va_list vaptr;
 
 	va_start(vaptr, n);
 
