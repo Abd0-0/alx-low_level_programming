@@ -8,7 +8,6 @@
  * @n: the number count.
  * @separator: is the string to be printed between numbers.
  *
- *
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
@@ -19,17 +18,23 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_start(vaptr, n);
 
-	for (i = 0; i < n - 1; i++)
+	if (n == 0)
+		printf("0\n");
+	else
 	{
+		for (i = 0; i < n - 1; i++)
+		{
+			x = va_arg(vaptr, int);
+
+			printf("%i", x);
+			if (separator != NULL)
+				printf("%s", separator);
+		}
+
 		x = va_arg(vaptr, int);
 
-		printf("%i", x);
-		if (separator != NULL)
-			printf("%s", separator);
+		printf("%i\n", x);
 	}
-	x = va_arg(vaptr, int);
-
-	printf("%i\n", x);
 
 	va_end(vaptr);
 }
