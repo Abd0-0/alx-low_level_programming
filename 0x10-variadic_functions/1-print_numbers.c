@@ -34,10 +34,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		printf("%i\n", x);
 	}
 
-	else
+	else if (n == 1)
 	{
 		x = va_arg(vaptr, int);
-		printf("%i", x);
+		printf("%i\n", x);
 	}
 
 	va_end(vaptr);
