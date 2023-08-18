@@ -28,17 +28,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			if (separator != NULL)
 				printf("%s", separator);
 		}
+	}
 
 		x = va_arg(vaptr, int);
 
 		printf("%i\n", x);
-	}
-
-	else if (n == 1)
-	{
-		x = va_arg(vaptr, int);
-		printf("%i\n", x);
-	}
 
 	va_end(vaptr);
 }
