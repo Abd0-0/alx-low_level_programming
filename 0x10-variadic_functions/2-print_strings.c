@@ -24,21 +24,18 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		return;
 	}
 
-	if (n > 1)
+	for (i = 0; i < n - 1; i++)
 	{
-		for (i = 0; i < n - 1; i++)
-		{
-			s = va_arg(vp, char *);
+		s = va_arg(vp, char *);
 
-			if (s == NULL)
-				printf("(nil)");
+		if (s == NULL)
+			printf("(nil)");
 
-			else
-				printf("%s", s);
+		else
+			printf("%s", s);
 
-			if (separator != NULL)
-				printf("%s", separator);
-		}
+		if (separator != NULL)
+			printf("%s", separator);
 	}
 
 	s = va_arg(vp, char *);
