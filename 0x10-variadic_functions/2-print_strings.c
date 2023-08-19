@@ -42,7 +42,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	s = va_arg(vp, char *);
 
 	if (!s)
-		printf("(nil)");
+		printf("(nil)\n");
 
 	else if (s)
 		printf("%s\n", s);
