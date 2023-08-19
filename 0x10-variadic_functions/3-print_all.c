@@ -57,10 +57,7 @@ void ps(va_list ptr)
 {
 	char *p = va_arg(ptr, char *);
 
-	if (!p)
-		printf("(nil)");
-	else
-		 printf("%s", p);
+	printf("%s", p);
 }
 
 /**
