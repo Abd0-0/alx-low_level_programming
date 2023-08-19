@@ -55,10 +55,9 @@ void print_all(const char * const format, ...)
 
 void ps(va_list ptr)
 {
-	char *p;
-	(p = va_arg(ptr, char *)) ? p : "(nil)";
+	char *p = va_arg(ptr, char *);
 
-	printf("%s", p);
+	printf("%s", p ? p : "(nil)");
 }
 
 /**
