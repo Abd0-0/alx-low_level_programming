@@ -28,7 +28,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		s = va_arg(vp, char *);
 
-		if (s == NULL)
+		if (!s)
 			printf("(nil)");
 
 		else
@@ -40,7 +40,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	s = va_arg(vp, char *);
 
-	if (s == NULL)
+	if (!s)
 		printf("(nil)");
 
 	else
