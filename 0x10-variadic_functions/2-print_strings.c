@@ -24,7 +24,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		return;
 	}
 
-	for (i = 0; i < n - 1; i++)
+	for (i = 0; i < n - 1 && n > 1; i++)
 	{
 		s = va_arg(vp, char *);
 
