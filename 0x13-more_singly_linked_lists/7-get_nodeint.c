@@ -4,8 +4,9 @@
  * get_nodeint_at_index -  a function that returns the nth node.
  *
  * @index: the index of the node, starting at 0.
+ * @head: a pointer to the head of list.
  *
- * Retuen: the nth node of a listint_t linked list.
+ * Return: the nth node of a listint_t linked list.
  * or NULL if the node doesn't exist.
  */
 
