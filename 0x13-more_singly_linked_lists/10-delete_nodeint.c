@@ -29,16 +29,19 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 	if (index > i)
 	{
-		while (index != i && ptr)
+		while (index != i && cur)
 		{
 			prev = cur;
 			cur =  cur->next;
 			index--;
 		}
 
-		prev->next = cur->next;
-		free(cur);
-		return (1);
+		if (cur)
+		{
+			prev->next = cur->next;
+			free(cur);
+			return (1);
+		}
 	}
 	return (-1);
 }
