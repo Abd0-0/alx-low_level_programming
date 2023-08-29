@@ -11,11 +11,11 @@
 
 size_t free_listint_safe(listint_t **head)
 {
-	size_t count;
+	size_t count = 0;
 	listint_t *ptr, *d;
 
 	if (head == NULL)
-		return;
+		return (count);
 
 	ptr = *head;
 
@@ -28,4 +28,5 @@ size_t free_listint_safe(listint_t **head)
 	}
 
 	*head = NULL;
+	return (count);
 }
