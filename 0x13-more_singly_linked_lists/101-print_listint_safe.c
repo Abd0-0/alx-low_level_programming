@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdint.h>
 
 /**
  * print_listint_safe - prints a listint_t linked list.
@@ -10,7 +11,7 @@
 
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *ptr[SIZE_MAX];
+	const listint_t *ptr[6000];
 	size_t counter = 0;
 	size_t j;
 
