@@ -11,7 +11,8 @@
 
 size_t free_listint_safe(listint_t **head)
 {
-	size_t count = 0;
+	listint_t *list[6000];
+	size_t i, count = 0;
 	listint_t *ptr, *d;
 
 	if (head == NULL)
@@ -21,7 +22,19 @@ size_t free_listint_safe(listint_t **head)
 
 	while (ptr)
 	{
+		i = 0;
+
+		while (i < count)
+		{
+			if (list[i] == ptr)
+			{
+				*head = NULL;
+				return (count);
+			}
+			i++;
+		}
 		d = ptr;
+		list[count] = ptr;
 		ptr = ptr->next;
 		free(d);
 		count++;
