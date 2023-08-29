@@ -10,7 +10,7 @@
 
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *ptr[1000];
+	const listint_t *ptr[SIZE_MAX];
 	size_t counter = 0;
 	size_t j;
 
