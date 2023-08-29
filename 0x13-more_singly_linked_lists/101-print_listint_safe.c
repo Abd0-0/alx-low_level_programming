@@ -12,13 +12,15 @@ size_t print_listint_safe(const listint_t *head)
 {
 	const listint_t *ptr[1000];
 	size_t counter = 0;
-	size_t j = 0;
+	size_t j;
 
 	if (!head)
 		exit(98);
 
 	while (head != NULL)
 	{
+		j = 0;
+
 		while (j <= counter)
 		{
 			if (ptr[j] == head)
@@ -30,8 +32,8 @@ size_t print_listint_safe(const listint_t *head)
 		}
 
 		printf("[%p] %d\n", (void *)head, head->n);
-		head = head->next;
 		ptr[counter] = head;
+		head = head->next;
 		counter++;
 	}
 	return (counter);
