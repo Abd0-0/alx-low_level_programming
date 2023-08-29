@@ -22,7 +22,7 @@ size_t print_listint_safe(const listint_t *head)
 	{
 		j = 0;
 
-		while (j <= counter)
+		while (j < counter)
 		{
 			if (ptr[j] == head)
 			{
