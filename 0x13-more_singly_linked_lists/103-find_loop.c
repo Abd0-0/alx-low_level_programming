@@ -35,7 +35,7 @@ listint_t *find_listint_loop(listint_t *head)
 
 listint_t *find(listint_t *head)
 {
-	listint_t *list[6000];
+	listint_t *list[1024];
 	int i, count = 0;
 	listint_t *ptr;
 
