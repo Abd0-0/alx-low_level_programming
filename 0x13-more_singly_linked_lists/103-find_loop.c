@@ -6,33 +6,30 @@
  *
  * @head: a pointer to the head.
  *
- * Return: The address of the node where the loop starts, or NULL if there is no loop.
+ * Return: The address of the node where the loop starts, or NULL.
  */
 
 listint_t *find_listint_loop(listint_t *head)
 {
 	listint_t *list[6000];
-	int counter = 0;
-	int j;
+	int i, counter = 0;
 
 	if (!head)
 		return (NULL);
 
 	while (head != NULL)
 	{
-		j = 0;
+		i = 0;
 
-		while (j < counter)
+		while (i < counter)
 		{
-			if (list[j] == head)
+			if (list[i] == head)
 			{
-				printf("-> [%p] %d\n", (void *)head, head->n);
 				return (head);
 			}
-			j++;
+			i++;
 		}
 
-		printf("[%p] %d\n", (void *)head, head->n);
 		list[counter] = head;
 		head = head->next;
 		counter++;
