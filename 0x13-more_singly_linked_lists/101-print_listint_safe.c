@@ -15,10 +15,10 @@ size_t print_listint_safe(const listint_t *head)
 	size_t counter = 0;
 	size_t j;
 
-	if (!head)
+	if (head == NULL)
 		exit(98);
 
-	while (head != NULL)
+	while (head != NULL )
 	{
 		j = 0;
 
