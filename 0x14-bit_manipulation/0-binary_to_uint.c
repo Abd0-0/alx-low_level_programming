@@ -18,8 +18,8 @@ unsigned int binary_to_uint(const char *b)
 
 	while (*b != '\0')
 	{
-		if (*b != '0' || *b != '1')
-			return (1);
+		if (*b != '0' && *b != '1')
+			return (0);
 
 		if (*b == '1')
 			dec = dec * 2 + 1;
