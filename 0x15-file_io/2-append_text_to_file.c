@@ -36,6 +36,7 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	if (count != len)
 		return (-1);
-	return (1);
+	if (count == len)
+		return (1);
 
 }
