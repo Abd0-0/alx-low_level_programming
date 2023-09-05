@@ -30,13 +30,12 @@ int create_file(const char *filename, char *text_content)
 	if (fd == -1)
 		return (-1);
 	if (len != 0)
-	{
 		count = write(fd, text_content, len);
 
-		if (count != len)
-			return (-1);
-	}
-
 	close(fd);
+
+	if (count != len)
+		return (-1);
+
 	return (1);
 }
