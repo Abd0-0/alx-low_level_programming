@@ -12,7 +12,7 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char buffer[1024];
+	char buffer[8192];
 	int fd;
 	ssize_t count;
 
@@ -21,11 +21,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	fd = open(filename, O_RDONLY);
 
-	if (fd < 0)
+	if (fd == -1)
 		return (0);
 
 	count = read(fd, buffer, letters);
-	count = write(1, buffer, count);
+	count = write(STDOUT_FILENO, buffer, count);
 
 	if (count == -1)
 		return (0);
