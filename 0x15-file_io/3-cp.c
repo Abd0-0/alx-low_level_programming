@@ -35,7 +35,7 @@ int main(int ac, char **av)
 		count_t = write(fd_to, buf, count_f);
 
 		if (count_t != count_f)
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(98);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 	}
 
 	if (count_f == -1)
