@@ -28,18 +28,19 @@ int create_file(const char *filename, char *text_content)
 
 	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 00600);
 
-	if (len == 0)
-		close (fd);
-
-
 	if (fd == -1)
 		return (-1);
-	
-	count = write(fd, text_content, len);
-	if (count < 1 || count != len)
-		return (-1);
 
-	close(fd);
+	if (len == 0)
+		close(fd);
+	else
+	{
+		count = write(fd, text_content, len);
+		close(fd);
+	}
+
+	if (count < 0 || count != len)
+		return (-1);
 
 	return (1);
 }
