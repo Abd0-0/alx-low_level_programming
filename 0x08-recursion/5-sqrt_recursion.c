@@ -19,7 +19,7 @@ int _sqrt_recursion(int n)
  * _sqrt - unction that returns the natural square root of a n.
  *
  * @n: the number to get it's sqrt.
- * @nn: n * n.
+ * @z: n * n.
  *
  * Return: sqrt of n.
  */
