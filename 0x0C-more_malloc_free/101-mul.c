@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(98);
 	}
-		
+	
 	if (argc == 3)
 	{
 		int f = atoi(argv[1]), s = atoi(argv[2]), sum;
