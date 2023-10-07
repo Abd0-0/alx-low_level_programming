@@ -1,5 +1,8 @@
 #include <stdlib.h>
 #include "main.h"
+#include <stdio.h>
+
+
 /**
  * string_nconcat - function creates a newly allocated space in memory,
  *
@@ -13,7 +16,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	unsigned int i, n1, n2;
+	unsigned int i, j, size1, size2, alloc_size;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -21,32 +24,56 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	for (i = 0; s1[i] != '\0'; i++)
-		;
-	n1 = i;
+	size1 = _strlen(s1);
+	size2 = _strlen(s2);
 
-	for (i = 0; s2[i] != '\0'; i++)
-		;
-	n2 = i;
+	if (n >= size2)
+		n = size2;
 
-	if (n >= n2)
-		n = n2;
-
-	ptr = malloc((n1 + n + 1) * sizeof(char));
+	alloc_size = size1 + n + 1;
+	ptr = malloc((alloc_size) * sizeof(char));
 
 	if (ptr == NULL)
 		return (NULL);
 
-	for (i = 0; i < n1; i++)
+	for (i = 0; i < size1; i++)
 	{
 		ptr[i] = s1[i];
 	}
 
-	while (i <= (n1 + n))
+	j = 0;
+
+	while (i < alloc_size - 1)
 	{
-		ptr[i] = *s2;
-		s2++;
-		i++;
+		ptr[i] = s2[j];
+		i++, j++;
 	}
+
+	ptr[i] = '\0';
+
 	return (ptr);
+}
+
+
+/**
+ * _strlen - a function that returns the length of a string.
+ *
+ * @s: a pointer to a string.
+ *
+ * Return: the length of the string.
+ */
+
+int _strlen(const char *s)
+{
+	int i;
+
+	if (!s)
+		return (0);
+
+	for (i = 0; *s != '\0'; i++)
+	{
+		s++;
+	}
+
+	return (i);
 }
