@@ -20,7 +20,7 @@ int sum_them_all(const unsigned int n, ...)
 		return (0);
 
 	va_start(vaptr, n);
-	
+
 	if (n)
 	{
 		for (i = 0; i < n; i++)
