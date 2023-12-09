@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stddef.h>
 
 /**
  * insert_dnodeint_at_index - inserts a new node at
@@ -11,7 +12,7 @@
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *newp, *temp, *temp2;
+	dlistint_t *newp, *temp, *temp2, *p = NULL;
 	unsigned int i = 0;
 
 	temp = *h;
@@ -39,14 +40,14 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	else
 	{
-		newp = make_node(newp, n);
+		p = make_node(p, n);
 		temp2 = temp->next;
-		temp->next = newp;
-		temp2->prev = newp;
-		newp->next = temp2;
-		newp->prev = temp;
+		temp->next = p;
+		temp2->prev = p;
+		p->next = temp2;
+		p->prev = temp;
 
-		return (newp);
+		return (p);
 	}
 	return (NULL);
 }
