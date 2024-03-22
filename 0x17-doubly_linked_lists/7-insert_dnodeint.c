@@ -5,7 +5,6 @@
  * @h: pointer to head of list
  * @idx: index of the list where the new node should be added
  * @n: data of the new node
- * 
  * Return:  the address of the new node, or NULL if it failed
  */
 
@@ -28,12 +27,14 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		new = make_node(n);
 		if (!new)
 			return (NULL);
-		
+
 		next_node = head->next;
 		head->next = new;
 		next_node->prev = new;
 		new->next = next_node;
 		new->prev = head;
+
+		return (new);
 	}
 
 	return (NULL);
